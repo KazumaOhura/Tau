@@ -1,0 +1,67 @@
+@startuml Graphic
+interface IGraphic{
+  +Init():int_16t
+  +Draw(Vec2 pos, HTEXTURE texture):int_16t
+  +DrawReverse(Vec2 pos, HTEXTURE texture):int_16t
+  +DrawRotate(Vec2 pos, HTEXTURE texture, Degree deg):int_16t
+  +DrawExtend(Vec2 pos, HTEXTURE texture, Scale scale):int_16t
+  +DrawMod(Vec2 pos, HTEXTURE texture, Degree deg, Scale scale):int_16t
+  +SetRenderState():int_16t
+  +SetTextureStage():int_16t
+  +SetSamplerState():int_16t
+  +Release():int_16t
+}
+
+class DirectXDevice{
+  -m_pDirect3D:ComPtr<IDIRECT3D9>
+}
+
+class DirectXGraphicDevice{
+  -m_pD3DDevice:ComPtr<IDirect3DDevice9>
+}
+
+class DirectX9{
+  +Init():int_16t
+  +Draw(Vec2 pos, HTEXTURE texture):int_16t
+  +DrawReverse(Vec2 pos, HTEXTURE texture):int_16t
+  +DrawRotate(Vec2 pos, HTEXTURE texture, Degree deg):int_16t
+  +DrawExtend(Vec2 pos, HTEXTURE texture, Scale scale):int_16t
+  +DrawMod(Vec2 pos, HTEXTURE texture, Degree deg, Scale scale):int_16t
+  +Release():int_16t
+  -m_pDirect3D:ComPtr<IDIRECT3D9>
+  -m_pD3DDevice:ComPtr<IDirect3DDevice9>
+  -m_D3Dpp:D3DPRESENT_PARAMETERS
+  -m_pTextureManager:unique_ptr<TextureManager>
+}
+
+class TextureManager{
+  -m_textures:std::vector<Texture, HTEXTURE>
+  {static} +Load(const CHAR* filepath):HTEXTURE
+  {static} +GetTextureByHandle(HTEXTURE handle):Texture
+}
+
+class Texture{
+  -m_width:uint_16t
+  -m_height:uint_16t
+  -m_pTexture:LPDIRECT3DTEXTURE9
+}
+
+class FontManager{
+  
+}
+
+class Font{
+  +handle:HFONT
+  {static} +Load():HFONT
+}
+
+class ColorRGB{
+  +red:unsigned char
+  +green:unsigned char
+  +blue:unsigned char
+}
+
+IGraphic <|-- DirectX9
+DirectX9 *-- TextureManager
+
+@enduml

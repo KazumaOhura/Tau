@@ -1,0 +1,22 @@
+@startuml Math
+namespace Math{
+  class Vec2{
+
+  }
+  class Vec3{
+
+  }
+  class Circle{
+
+  }
+  class Rect{
+
+  }
+  class Radian{
+
+  }
+  class Degree{
+
+  }
+}
+@enduml

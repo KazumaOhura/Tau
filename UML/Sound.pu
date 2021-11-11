@@ -1,0 +1,19 @@
+@startuml Sound
+interface ISound{
+  +Load():HSOUND
+  +Play(HSOUND sound):int_16t
+  +Stop(HSOUND sound):int_16t
+  +Resume(HSOUND sound):int_16t
+}
+
+class XAudio2{
+
+}
+
+class DirectSound{
+
+}
+
+ISound <|-- XAudio2
+ISound <|-- DirectSound
+@enduml

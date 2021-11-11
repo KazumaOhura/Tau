@@ -1,0 +1,18 @@
+@startuml Input
+set namespaceSeparator ::
+namespace Input{
+  Interface IInputDevice{
+
+  }
+  class XInput{
+
+  }
+  class DInput{
+
+  }
+}
+
+Input::IInputDevice <|-- Input::XInput
+Input::IInputDevice <|-- Input::DInput
+
+@enduml

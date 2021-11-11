@@ -1,0 +1,6 @@
+@startuml Type
+  class HTEXTURE
+  class HFONT
+  class HSOUND
+  class HMOVIE
+@enduml

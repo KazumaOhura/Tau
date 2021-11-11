@@ -1,0 +1,9 @@
+@startuml Movie
+interface IMovie{
+
+}
+
+class DirectShow{
+  
+}
+@enduml

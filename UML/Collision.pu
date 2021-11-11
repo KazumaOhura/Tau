@@ -1,0 +1,6 @@
+@startuml Collision
+interface CollisionInfo{
+
+}
+
+@enduml

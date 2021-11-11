@@ -1,0 +1,45 @@
+@startuml Tau
+
+set namespaceSeparator ::
+
+namespace Tau{
+  class Tau{
+    -graphic:IGraphic&
+    -sound:ISound&
+    -movie:IMovie&
+    -input:IInput&
+
+    {static} +Init():int_16t
+    {static} +Release():int_16t
+    {static} +GetGraphic():IGraphic&
+    {static} +GetSound():ISound&
+    {static} +GetMovie():IMovie&
+    {static} +GetInput():IInput&
+  }
+  
+  interface IGraphic
+  interface ISound
+  interface IMovie
+  interface IInput
+
+  class DirectX9
+  class DirectX11
+  class DirectX12
+  class DirectSound
+  class XAudio2
+  class DirectShow
+  class Texture
+  class DInput
+  class XInput
+}
+
+Tau::IInput <|-- Tau::DInput
+Tau::IInput <|-- Tau::XInput
+Tau::IGraphic <|-- Tau::DirectX9
+Tau::IGraphic <|-- Tau::DirectX11
+Tau::IGraphic <|-- Tau::DirectX12
+Tau::ISound <|-- Tau::XAudio2
+Tau::ISound <|-- Tau::DirectSound
+Tau::IMovie <|-- Tau::DirectShow
+
+@enduml

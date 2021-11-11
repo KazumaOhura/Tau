@@ -1,0 +1,7 @@
+@startuml DirectXFactory
+
+class DirectXFactory{
+  Create():void
+}
+
+@enduml
