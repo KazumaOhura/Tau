@@ -9,8 +9,8 @@ namespace Tau{
     -m_movie:unique_ptr<IMovie>
     -m_input:unique_ptr<IInput>
 
-    {static} +Init():int_16t
-    {static} +Release():int_16t
+    {static} +Init():int16_t
+    {static} +Release():int16_t
   }
   
   interface IGraphic
