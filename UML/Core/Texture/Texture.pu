@@ -1,0 +1,7 @@
+@startuml Font
+class Texture{
+  -m_width:uint_16t
+  -m_height:uint_16t
+  -m_pTexture:LPDIRECT3DTEXTURE
+}
+@enduml

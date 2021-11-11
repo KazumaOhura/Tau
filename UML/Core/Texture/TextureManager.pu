@@ -1,0 +1,7 @@
+@startuml Font
+class TextureManager{
+  -m_textures:std::vector<Texture, HTEXTURE>
+  {static} +Load(const CHAR* filepath):HTEXTURE
+  {static} +GetTextureByHandle(HTEXTURE handle):Texture
+}
+@enduml

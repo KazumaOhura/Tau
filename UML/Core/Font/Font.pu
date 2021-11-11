@@ -1,0 +1,6 @@
+@startuml Font
+class Font{
+  +handle:HFONT
+  {static} +Load():HFONT
+}
+@enduml
