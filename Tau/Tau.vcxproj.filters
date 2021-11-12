@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{86e5a5a8-e688-48cf-ae4c-ae272158ced2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorythm">
+      <UniqueIdentifier>{86b2fe23-a009-499a-b2ee-3c99117d0911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{5dc122f8-24e4-4aab-9819-c5d8a6ae8938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{d6b697a3-663d-490f-99b5-42988e78b418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{589fed1c-3a31-44b0-bdd9-fbc9271788a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Node">
+      <UniqueIdentifier>{38b572d7-1525-4668-88d7-5483e5110961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Template">
+      <UniqueIdentifier>{b39b0382-7443-4c89-b2a7-cc73e23738b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type">
+      <UniqueIdentifier>{e2374bd9-0143-492a-a8be-ddbee55664f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Tau.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Tau.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.clang-format" />
+    <None Include="..\CPPLINT.cfg" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+@startuml Singleton
+enum CREATE_RESULT{
+  CR_COULD_NOT_CREATE,
+  CR_OK,
+  CR_FAILED,
+  CR_ALREADY_CREATED
+}
+
+class Singleton{
+  {static} +GetRef():T&
+  {static} +GetPtr():T*
+  {static} +CreateInstance():CREATE_RESULT
+  {static} +ReleaseInstance():void
+  {static} -T* m_instance
+}
+@enduml

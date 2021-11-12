@@ -1,7 +1,0 @@
-@startuml Singleton
-class Singleton{
-  {static} +GetRef():T&
-  {static} +GetPtr():T*
-  {static} -T* m_instance
-}
-@enduml
