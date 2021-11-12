@@ -32,4 +32,8 @@
   <ItemGroup>
     <ClCompile Include="Core\Tau.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.clang-format" />
+    <None Include="..\CPPLINT.cfg" />
+  </ItemGroup>
 </Project>
