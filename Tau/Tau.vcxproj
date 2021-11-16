@@ -131,6 +131,12 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>clang-format -style=file -i *.cpp *.h</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>clang format</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -147,12 +153,22 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>clang-format -style=file -i *.cpp *.h</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>clang format</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Core\Tau.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Tau.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.clang-format" />
+    <None Include="..\CPPLINT.cfg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
