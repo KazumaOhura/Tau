@@ -1,0 +1,25 @@
+@startuml Window
+abstract App{
+  -m_pWindow:Window*
+}
+
+abstract Window{
+  +Create():void <<virtual>>
+  +LocalWindowProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam):LRESULT CALLBACK
+  -m_hWnd:HWND
+}
+
+class GameApp{
+  -m_tau:Tau
+}
+
+class GameWindow{
+  +Create():void <<final>>
+  +LocalWindowProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam):LRESULT CALLBACK
+}
+
+App <|-- GameApp
+App *-- Window
+Window <|-- GameWindow
+
+@enduml
