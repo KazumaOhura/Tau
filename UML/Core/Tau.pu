@@ -4,42 +4,19 @@ set namespaceSeparator ::
 
 namespace Tau{
   class Tau{
-    -m_graphic:unique_ptr<IGraphic>
-    -m_sound:unique_ptr<ISound>
-    -m_movie:unique_ptr<IMovie>
-    -m_input:unique_ptr<IInput>
+    -m_graphic:Graphic
+    -m_sound:Sound
+    -m_movie:Movie
+    -m_input:Input
 
     {static} +Init():int16_t
     {static} +Release():int16_t
   }
-  
-  interface IGraphic
-  interface ISound
-  interface IMovie
-  interface IInput
-
-  class DirectX9
-  class DirectX11
-  class DirectX12
-  class DirectSound
-  class XAudio2
-  class DirectShow
-  class Texture
-  class DInput
-  class XInput
 }
 
-Tau::IInput <|-- Tau::DInput
-Tau::IInput <|-- Tau::XInput
-Tau::IGraphic <|-- Tau::DirectX9
-Tau::IGraphic <|-- Tau::DirectX11
-Tau::IGraphic <|-- Tau::DirectX12
-Tau::ISound <|-- Tau::XAudio2
-Tau::ISound <|-- Tau::DirectSound
-Tau::IMovie <|-- Tau::DirectShow
-Tau::Tau *-- Tau::IGraphic
-Tau::Tau *-- Tau::ISound
-Tau::Tau *-- Tau::IMovie
-Tau::Tau *-- Tau::IInput
+Tau::Tau *-- Tau::Graphic
+Tau::Tau *-- Tau::Sound
+Tau::Tau *-- Tau::Movie
+Tau::Tau *-- Tau::Input
 
 @enduml

@@ -28,9 +28,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Tau.h" />
+    <ClInclude Include="App\App.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Tau.cpp" />
+    <ClCompile Include="App\App.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.clang-format" />
+    <None Include="..\CPPLINT.cfg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.clang-format" />

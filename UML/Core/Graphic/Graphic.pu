@@ -12,6 +12,12 @@ interface IGraphic{
   +Release():int_16t
 }
 
+class Graphic{
+  -m_pDirect3D:DirectXDevice
+  -m_pDirectXDevice:DirectXGraphicDevice
+  -m_textureManager:TextureManager
+}
+
 class DirectXDevice{
   -m_pDirect3D:ComPtr<LPDIRECT3D>
 }
@@ -32,19 +38,18 @@ class DirectX9{
 }
 
 class DirectX11{
-
-}
-
-
-
-class ColorRGB{
-  +red:unsigned char
-  +green:unsigned char
-  +blue:unsigned char
+  +Init():int_16t
+  +Draw(Vec2 pos, HTEXTURE texture):int_16t
+  +DrawReverse(Vec2 pos, HTEXTURE texture):int_16t
+  +DrawRotate(Vec2 pos, HTEXTURE texture, Degree deg):int_16t
+  +DrawExtend(Vec2 pos, HTEXTURE texture, Scale scale):int_16t
+  +DrawMod(Vec2 pos, HTEXTURE texture, Degree deg, Scale scale):int_16t
+  +Release():int_16t
+  -m_D3Dpp:D3DPRESENT_PARAMETERS
 }
 
 IGraphic <|-- DirectX9
 IGraphic <|-- DirectX11
-DirectX9 *-- TextureManager
+Graphic *-- TextureManager
 
 @enduml
