@@ -33,3 +33,12 @@
 
 # VisualStudio
 .vs
+
+# Custom files
+*.idb
+*.pdb
+*.tlog
+*.recipe
+*.lastbuildstate
+*.ilk
+*/Debug/*.log
