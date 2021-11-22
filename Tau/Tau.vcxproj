@@ -162,10 +162,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Core\Tau.h" />
+    <ClInclude Include="Type\NonCopyable.h" />
+    <ClInclude Include="Type\RectSize.h" />
     <ClInclude Include="Type\tstring.h" />
+    <ClInclude Include="App\Window\Window.h" />
+    <ClInclude Include="App\WindowParam\WindowParam.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Tau.cpp" />
+    <ClCompile Include="App\Window\Window.cpp" />
+    <ClCompile Include="App\WindowParam\WindowParam.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.clang-format" />
